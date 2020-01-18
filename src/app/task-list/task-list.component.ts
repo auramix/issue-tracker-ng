@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { TaskList } from '../TaskList';
 
 @Component({
   selector: 'app-task-list',
@@ -7,20 +8,10 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
   styleUrls: ['./task-list.component.css'],
 })
 export class TaskListComponent {
-  todo = [
-    'Get to work',
-    'Pick up groceries',
-    'Go home',
-    'Fall asleep'
-  ];
-
-  done = [
-    'Get up',
-    'Brush teeth',
-    'Take a shower',
-    'Check e-mail',
-    'Walk dog'
-  ];
+ TaskList = {
+   title: 'todos',
+   tasks: [{text: 'first and only todo'}]
+ }
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
