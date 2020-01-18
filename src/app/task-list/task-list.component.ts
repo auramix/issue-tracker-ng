@@ -16,13 +16,17 @@ export class TaskListComponent {
   }
 
   showTextEdit(id) {
-    let input = document.getElementById(id);
+    let div = document.getElementById(id);
+    let input = div.getElementsByTagName('input')[0];
+    let p = div.getElementsByTagName('p')[0];
+
     if(input.style.visibility == 'hidden') {
+      p.style.visibility = 'hidden';
       input.style.visibility = 'visible';
     } else {
+      p.style.visibility = 'visible';
       input.style.visibility = 'hidden';
     }
-    console.log(input.style.visibility);
   }
 
   drop(event: CdkDragDrop<string[]>) {
