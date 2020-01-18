@@ -29,6 +29,19 @@
   border: none;
 }
 
+.list-item-edit-btn {
+  visibility: hidden;
+}
+
+.list-item:hover .list-item-edit-btn{
+  visibility: visible;
+}
+
+/* .list-item-input {
+  visibility: hidden;
+} */
+
+
 /* Highlight the list item that is being dragged. */
 .cdk-drag-preview {
   border-radius: 4px;
