@@ -4,9 +4,9 @@
   <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="list"
       [cdkDropListConnectedTo]="doneList" class="list" (cdkDropListDropped)="drop($event)">
     <div id={{title+i}} class="list-item" *ngFor="let item of list; index as i" cdkDrag>
-      <p style="visibility: visible;">{{item.text}}</p>
-      <input  class="list-item-input" style="visibility: hidden;" type="text" [(ngModel)]="item.text" placeholder={{item.text}}>
       <button type="button" class="list-item-edit-btn" (click)="showTextEdit(title+i)" >edit</button>
+      <p style="visibility: visible; display: inline-block;">{{item.text}}</p>
+      <input  class="list-item-input" style="visibility: hidden;" type="text" [(ngModel)]="item.text" placeholder={{item.text}}>
     </div>
   </div>
 </div>

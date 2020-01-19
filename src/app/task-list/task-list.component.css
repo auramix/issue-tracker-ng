@@ -25,6 +25,18 @@
   font-size: 14px;
 }
 
+.list-item p{
+  max-width: 20em;
+}
+.list-item button{
+  display: block;
+  margin-left: 30em;
+}
+
+.list-item-input {
+  display: block;
+}
+
 .list-item:last-child {
   border: none;
 }
@@ -36,10 +48,6 @@
 .list-item:hover .list-item-edit-btn{
   visibility: visible;
 }
-
-/* .list-item-input {
-  visibility: hidden;
-} */
 
 
 /* Highlight the list item that is being dragged. */
