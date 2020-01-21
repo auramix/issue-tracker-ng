@@ -8,11 +8,12 @@ import { Task } from '../Task';
   styleUrls: ['./task-list.component.css'],
 })
 export class TaskListComponent {
-  list = [{text: 'first and only todo'}];
+  list: Task[] = [new Task()];
   title = 'todos';
  
   addTask() {
     this.list.push(new Task());
+    console.log('Our todo list', this.list);
   }
 
   showTextEdit(id) {

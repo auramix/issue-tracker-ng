@@ -16,6 +16,7 @@
 }
 
 .list-item {
+  position: relative;
   padding: 20px 10px;
   border-bottom: solid 1px #ccc;
   box-sizing: border-box;
@@ -35,6 +36,7 @@
 
 .list-item-input {
   display: block;
+  cursor: text;
 }
 
 .list-item:last-child {
@@ -71,4 +73,16 @@
 .cdk-drag-placeholder {
   opacity: 0;
 }
+
+
+.example-handle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ccc;
+  cursor: move;
+  width: 24px;
+  height: 24px;
+}
+
 
