@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskList } from './TaskList';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'issue-tracker';
+  taskLists: TaskList[];
+  
+  constructor() {}
+
 }

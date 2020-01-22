@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { TaskList } from '../TaskList';
 import { Task } from '../Task';
 
 @Component({
@@ -8,11 +9,10 @@ import { Task } from '../Task';
   styleUrls: ['./task-list.component.css'],
 })
 export class TaskListComponent {
-  list: Task[] = [new Task()];
-  title = 'todos';
+  list: TaskList = new TaskList();
  
   addTask() {
-    this.list.push(new Task());
+    this.list.tasks.push(new Task());
     console.log('Our todo list', this.list);
   }
 
