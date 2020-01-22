@@ -16,8 +16,11 @@ export class TaskListComponent {
     console.log('Our todo list', this.list);
   }
 
-  onKey(value, i) {
+  onKeyTaskEdit(value, i) {
     this.list.tasks[i].text = value;
+  }
+  onKeyTitleEdit(value) {
+    this.list.title = value;
   }
 
   drop(event: CdkDragDrop<string[]>) {
