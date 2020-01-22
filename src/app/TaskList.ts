@@ -2,5 +2,5 @@ import { Task } from './Task';
 
 export class TaskList {
   title: string =  'New task list';
-  tasks: Task[] = [];
+  tasks: Task[] = [new Task()];
 }

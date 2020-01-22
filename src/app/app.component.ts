@@ -8,8 +8,11 @@ import { TaskList } from './TaskList';
 })
 export class AppComponent {
   title = 'issue-tracker';
-  taskLists: TaskList[];
-  
+  taskLists: TaskList[] = [];
+
   constructor() {}
 
+  addTaskList() {
+    this.taskLists.push(new TaskList());
+  }
 }
