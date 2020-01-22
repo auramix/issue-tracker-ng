@@ -17,7 +17,7 @@ export class TaskListComponent {
   }
 
   onKey(value, i) {
-    this.list[i].text = value;
+    this.list.tasks[i].text = value;
   }
 
   drop(event: CdkDragDrop<string[]>) {

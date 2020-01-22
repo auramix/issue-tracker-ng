@@ -2,8 +2,13 @@
 <app-nav-bar></app-nav-bar>
 <div>
   <button (click)="addTaskList()">New todo list</button>
+  <div cdkDropListGroup>
+    <!-- All lists in here will be connected. -->
+    <div >
+      <app-task-list *ngFor="let list of taskLists"></app-task-list>
+    </div>
+  </div>
   <div *ngFor="let list of taskLists;">
-    <app-task-list ></app-task-list>
   </div>
 </div>
 <router-outlet></router-outlet>
