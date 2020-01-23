@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { TaskList } from './TaskList';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+
 
 @Component({
   selector: 'app-root',
@@ -14,5 +16,10 @@ export class AppComponent {
 
   addTaskList() {
     this.taskLists.push(new TaskList());
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.taskLists, event.previousIndex, event.currentIndex);
+    console.log(this.taskLists);
   }
 }
