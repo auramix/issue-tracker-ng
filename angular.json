@@ -59,7 +59,8 @@
                 }
               ]
             }
-          }
+          },
+          "preserveSymlinks": true
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",

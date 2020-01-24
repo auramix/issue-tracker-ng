@@ -15,6 +15,8 @@ import { MatListModule } from '@angular/material/list';
 import { TaskListComponent } from './task-list/task-list.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { BoardListsComponent } from './board-lists/board-lists.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,14 @@ import { BoardListsComponent } from './board-lists/board-lists.component';
     MatIconModule,
     MatListModule,
     DragDropModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers,
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

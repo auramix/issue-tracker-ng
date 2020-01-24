@@ -8,7 +8,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
   templateUrl: './board-lists.component.html',
   styleUrls: ['./board-lists.component.css']
 })
-export class BoardListsComponent implements OnInit {
+export class BoardListsComponent {
   title = 'issue-tracker';
   taskLists: TaskList[] = [];
 
@@ -16,6 +16,10 @@ export class BoardListsComponent implements OnInit {
 
   addTaskList() {
     this.taskLists.push(new TaskList());
+  }
+
+  onKeyTitleEdit(value, i) {
+    this.taskLists[i].title = value;
   }
 
   drop(event: CdkDragDrop<string[]>) {
