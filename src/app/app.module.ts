@@ -14,12 +14,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { TaskListComponent } from './task-list/task-list.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { BoardListComponent } from './board-list/board-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     TaskListComponent,
+    BoardListComponent,
   ],
   imports: [
     BrowserModule,
