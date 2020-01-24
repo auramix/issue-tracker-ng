@@ -1,3 +1,9 @@
+h2 {
+  margin-right: 5em;
+  display: inline-block;
+  width: initial;
+}
+
 .container {
   width: 400px;
   max-width: 100%;
@@ -76,6 +82,7 @@
 }
 
 
+
 .task-handle {
   position: absolute;
   top: 10px;
@@ -91,10 +98,14 @@
   margin-right: 90px;
 }
 
+.task-list-title-wrapper {
+  display: inline-block;
+  width: 18em;
+}
+
 .list-handle {
   position: relative;
   display: inline-block;
-  margin-left: 90%;
   color: #ccc;
   cursor: move;
   width: 24px;

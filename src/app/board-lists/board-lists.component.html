@@ -4,7 +4,9 @@
     <!-- All lists in here will be connected. -->
     <div cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
       <div cdkDrag class="task-list-wrapper" *ngFor="let list of taskLists; index as i" >
-        <h2 contenteditable  #title (blur)="onKeyTitleEdit(title.textContent, i)">{{list.title}}</h2>
+        <div class="task-list-title-wrapper">
+          <h2 contenteditable #title (blur)="onKeyTitleEdit(title.textContent, i)">{{list.title}}</h2>
+        </div>
 
         <div class="list-handle" cdkDragHandle>
           <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
