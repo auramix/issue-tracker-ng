@@ -94,13 +94,21 @@ h2 {
 }
 
 .task-list-wrapper {
-  display: inline-block;
   margin-right: 90px;
 }
 
-.task-list-title-wrapper {
+.task-list-title-text-wrapper {
   display: inline-block;
   width: 18em;
+}
+
+.title-spacer {
+  margin-left: 1.5em;
+}
+
+.task-list-title {
+  display: inline-block;
+  margin-right: 6.5em;
 }
 
 .list-handle {

@@ -1,13 +1,6 @@
-.sidenav-container {
-  height: fit-content;
-}
-
-.sidenav {
-  width: 200px;
-}
-
-.sidenav .mat-toolbar {
-  background: inherit;
+mat-toolbar {
+  background-color: #14527f;
+  color: white;
 }
 
 .mat-toolbar.mat-primary {
