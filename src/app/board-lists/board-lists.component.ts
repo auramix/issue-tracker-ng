@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskList } from '../TaskList';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { TasksService } from '../tasks.service';
 
 
 @Component({
@@ -10,9 +11,17 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 })
 export class BoardListsComponent {
   title = 'issue-tracker';
-  taskLists: TaskList[] = [];
+  taskLists: TaskList[];
 
-  constructor() {}
+  constructor(private tasksService: TasksService) {}
+
+  ngOnInit() {
+    this.getAllTasks();
+  }
+
+  getAllTasks() {
+    this.taskLists = this.tasksService.getAllTasks()
+  }
 
   addTaskList() {
     this.taskLists.push(new TaskList());
