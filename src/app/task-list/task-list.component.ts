@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { TaskList } from '../TaskList';
 import { Task } from '../Task';
@@ -9,7 +9,7 @@ import { Task } from '../Task';
   styleUrls: ['./task-list.component.css'],
 })
 export class TaskListComponent {
-  list: TaskList = new TaskList();
+  @Input() list: TaskList;
  
   addTask() {
     this.list.tasks.push(new Task('new todo'));

@@ -22,7 +22,7 @@
       </div>
 
     <div cdkDropListGroup class="task-list-wrapper" >
-      <app-task-list *ngFor="let list of taskLists"></app-task-list>
+      <app-task-list *ngFor="let list of taskLists" [list]="list"></app-task-list>
     </div>
   </div>
 </div>
