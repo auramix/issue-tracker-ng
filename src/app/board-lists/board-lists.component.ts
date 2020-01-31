@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { TaskList } from '../TaskList';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { TasksService } from '../tasks.service';
@@ -20,6 +21,7 @@ export class BoardListsComponent {
   }
 
   getAllTasks() {
+    //TODO Inject Selectors and use to populate TaskLists from state
     this.taskLists = this.tasksService.getAllTasks()
   }
 
